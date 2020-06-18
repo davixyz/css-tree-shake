@@ -1,0 +1,40 @@
+{
+  "name": "css-tree-shake",
+  "version": "1.0.0",
+  "description": "Because those tidbits of css won't fall on it's own / Repository with CSS Tree Shaking exploration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run build && serve dist",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davixyz/css-tree-shake.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davixyz/css-tree-shake/issues"
+  },
+  "homepage": "https://github.com/davixyz/css-tree-shake#readme",
+  "devDependencies": {
+    "@americanexpress/purgecss-loader": "^2.0.0",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "clsx": "^1.1.1",
+    "css-loader": "^3.6.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
+}
