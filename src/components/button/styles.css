@@ -1,4 +1,4 @@
-.Primary {
+.Button {
   background-color: #05b169;
   border-radius: 0.25rem;
   border: 1px solid #05b169;
@@ -11,19 +11,19 @@
   outline: none;
 }
 
-.Primary:hover,
-.Primary:focus {
+.Button:hover,
+.Button:focus {
   background-color: #00a55e;
   border-color: #00a55e;
 }
 
-.Secondary {
+.ButtonSecondary {
   background: transparent;
   border-color: #fff;
 }
 
-.Secondary:hover,
-.Secondary:focus {
+.ButtonSecondary:hover,
+.ButtonSecondary:focus {
   background: #fff;
   border-color: #fff;
   color: #000;

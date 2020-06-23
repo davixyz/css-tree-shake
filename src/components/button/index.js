@@ -4,9 +4,9 @@ import styles from './styles.css';
 
 const Button = ({ children, className, variant, ...rest }) => {
   const classes = cx(
-    styles.Primary,
+    styles.Button,
     {
-      [variant]: variant,
+      [styles.ButtonSecondary]: variant === 'secondary',
     },
     className
   );

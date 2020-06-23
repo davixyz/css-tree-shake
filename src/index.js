@@ -6,7 +6,6 @@ import { Text } from './components/text';
 const App = () => (
   <main>
     <Button>Hello Button</Button>
-    <Button variant="Secondary">Hello Button</Button>
     <Text>Hello Text</Text>
   </main>
 );
