@@ -1,4 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurifyCSSPlugin = require('purifycss-webpack');
+const glob = require('glob');
+const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
@@ -15,21 +18,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                localIdentName: '[name]__[local]___[hash:base64:5]',
-              },
-            },
-          },
-          {
-            loader: '@americanexpress/purgecss-loader',
-            options: {
-              paths: ['src/**/*.{js,jsx}'],
-              whitelistPatternsChildren: [/:global$/],
-            },
-          },
+          'css-loader'
         ],
       },
     ],
@@ -45,6 +34,10 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
+    }),
+    new PurifyCSSPlugin({
+      // Give paths to parse for rules. These should be absolute!
+      paths: glob.sync(path.join(__dirname, 'src/**/*.js')),
     }),
   ],
 };
